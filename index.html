@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- box icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Noto+Sans+Old+Permic&family=Playfair+Display:wght@600&family=Poppins:wght@100;200;300;400&family=Ubuntu&display=swap" rel="stylesheet">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <!-- header design -->
+    <header class="header">
+        <a href="#" class="logo">portfolio</a>
+
+        <i class='bx bx-menu' id="menuicon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about" >About</a>
+            <a href="#services" >services</a>
+            
+            <a href="#contact" >Contact</a>
+        </nav>
+    </header>
+
+    <!-- home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, it's Me</h3>
+            <h1>Ankit Jha</h1>
+            <h3>And I'm a <span class="front" id="front"></span></h3>
+            <p>Prospective B.Tech candidate 
+                Seeking opportunities to apply knowledge, develop practical skills 
+                And contribute to innovative projects </p>
+
+            <div class="social-media">
+                <a href="https://www.facebook.com/profile.php?id=100051011556652" target="_blank"><i class='bx bxl-facebook'  ></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.instagram.com/jhaankit499/" target="_blank"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="https://www.linkedin.com/in/ankit-jha-b44435259/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/ankitjha412" target="_blank"><i class='bx bxl-github'></i></a>
+            </div>
+            <a href="assets/resume.pdf" class="btn" download="Ankit_Jha_Resume.pdf">Download Resume</a>
+
+    </div>
+    <div class="home-img">
+        <img src="assets/profile-pic (1).png" alt="profile-pic">
+    </div>
+    </section>
+
+    <!-- about section design -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="assets/profile-pic (1).png" alt="image">
+        </div>
+        <div class="about-content">
+            <h2 class="about"><u>About Me</u></h2>
+            <h3>Frontend Developer !</h3>
+            <p>
+                Certainly! Pursuing a Bachelor of Technology (B.Tech) in Computer Science and Engineering (CSE) at SRM University is a commendable choice for several reasons.
+                
+                Firstly, SRM University is known for its strong academic reputation and commitment to providing quality education. The university is equipped with state-of-the-art facilities, experienced faculty, and a conducive learning environment, all of which contribute to a holistic educational experience.
+                
+                In the field of Computer Science and Engineering, the second year of the B.Tech program at SRM University is designed to build upon the foundational knowledge acquired in the first year. This year typically involves more specialized coursework in areas such as algorithms, data structures, software engineering, and computer networks. The curriculum is structured to provide a well-rounded understanding of both theoretical concepts and practical applications in the field.</p>
+                <a href="#" class="btn">Read more</a>
+        </div>
+    </section>
+    
+    <!-- service section design -->
+    <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+
+        <div class="service-container">
+            <div class="service-box">
+                <i class='bx bx-code-alt' ></i>
+                <h3>Web Development</h3>
+                <p>Website Design and Development:
+
+                    Creation of visually appealing and user-friendly websites.
+                    Responsive design to ensure compatibility across various devices (desktops, tablets, smartphones).
+                    Custom web development for unique and specific requirements.
+                    E-commerce Development:
+                    
+                    Building online stores with secure payment gateways.
+                    Integration of inventory management systems.
+                    User-friendly shopping cart solutions.</p>
+                    <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="service-box">
+                <i class='bx bxs-paint' ></i>
+                <h3>Graphic Design</h3>
+                <p>Logo Design:
+
+                    Creation of unique and memorable logos that represent your brand identity.
+                    Development of logos that are scalable and versatile for different applications.
+                    Brand Identity Design:
+                    
+                    Designing visual elements that establish and reinforce your brand identity.
+                    Consistent use of colors, fonts, and imagery to create a cohesive brand image.</p>
+                    <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="service-box">
+                <i class='bx bxl-internet-explorer' ></i>
+                <h3>Web Design</h3>
+                <p>Responsive Web Design:
+
+                    Creation of websites that adapt to different screen sizes and devices, ensuring a consistent and optimal user experience across desktops, tablets, and smartphones.
+                    User Interface (UI) Design:
+                    
+                    Designing the visual elements of the website, including buttons, menus, and interactive components, to create an intuitive and user-friendly interface.
+                    User Experience (UX) Design:
+                    
+                    Enhancing the overall user experience by focusing on usability, accessibility, and the logical flow of information throughout the website.</p>
+                    <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+   <!-- contact section design -->
+   <section class="contact" id="contact">
+    <h2 class="heading">contact Me!</h2>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <div class="input-box">
+            <input type="text" placeholder="Full name" name="full_name">
+            <input type="email" placeholder="Email Address" name="email_address">
+        </div>
+        <div class="input-box">
+            <input type="number" placeholder="Mobile Number" name="mobile_number">
+            <input type="text" placeholder="Email subject" name="email_subject">
+        </div>
+        <input type="hidden" name="access_key" value="6b351aeb-6323-4edd-86ed-4754dded53c8">
+        <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Message" class="btn">
+    </form>
+    
+   </section>
+
+   <footer class="footer">
+    <div class="footer-text">
+        <p>copyright &copy; 2023 by Ankit | All Rights Reserved . </p>
+    </div>
+
+    <div class="footer-icontop">
+        <a href="#home" ><i class='bx bx-up-arrow-alt' ></i></a>
+    </div>
+   </footer>
+
+   <!-- scroll reveal -->
+   <script src="https://unpkg.com/scrollreveal"></script>
+   
+   <!-- typed js -->
+   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script src="port.js">
+
+    </script>
+</body>
+</html>
