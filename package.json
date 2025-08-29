@@ -1,0 +1,20 @@
+{
+  "name": "ankit-portfolio-react-tailwind",
+  "version": "1.0.0",
+  "description": "This is a professional portfolio website built using **React + Tailwind CSS** with unique **hover glow effects** and a modern UI.  \r The design uses subtle gradients, glassmorphism, and soft glowing hover states to make the UI feel elegant without being overwhelming.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankitjha412/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankitjha412/portfolio/issues"
+  },
+  "homepage": "https://github.com/ankitjha412/portfolio#readme"
+}
