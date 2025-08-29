@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ankitjha412/portfolio/issues"
   },
-  "homepage": "https://github.com/ankitjha412/portfolio#readme"
+  "homepage": "https://github.com/ankitjha412/portfolio#readme",
+  "devDependencies": {
+    "vite": "^7.1.3"
+  }
 }
