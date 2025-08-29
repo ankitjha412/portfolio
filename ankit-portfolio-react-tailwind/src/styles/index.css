@@ -1,24 +1,3 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-html, body, #root {
-  height: 100%;
-}
-
-.gradient-text {
-  @apply bg-gradient-to-r from-primary-400 via-primary-600 to-primary-400 text-transparent bg-clip-text;
-}
-
-.section {
-  @apply py-24 md:py-32;
-}
-
-.card {
-  @apply rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur shadow-soft;
-} */
-
-
 
 @tailwind base;
 @tailwind components;
@@ -55,7 +34,9 @@ html, body, #root {
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
+  pointer-events: none;   /* ✅ allow clicks through */
 }
+
 
 @keyframes lightning {
   0%   { background-position: 0% 50%; }
