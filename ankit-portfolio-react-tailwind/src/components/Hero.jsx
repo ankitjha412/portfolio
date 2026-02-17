@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import resume from '../../assets/Ankit_resume.pdf'
-import profilepic from '../assets/Ankit_profile1.jpeg'
+import profilepic from '../../assets/Ankit_Profile1.jpeg'
 
 export default function Hero() {
   const [githubData, setGithubData] = useState(null)
