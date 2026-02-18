@@ -1,67 +1,5 @@
-// import React from 'react'
-// import ProjectCard from './ProjectCard.jsx'
-// import { projects } from '../data/projects.js'
-
-// export default function Projects() {
-//   return (
-//     <section id="projects" className="section">
-//       <div className="max-w-6xl mx-auto px-4">
-//         <h2 className="text-3xl md:text-4xl font-bold">Projects</h2>
-//         <p className="mt-3 text-neutral-300">Highlighted work I’ve built and shipped.</p>
-//         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-//           {projects.map((p, i) => <ProjectCard key={p.title} project={p} idx={i} />)}
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
-
-
-
-// import React, { useEffect, useState } from "react"
-// import ProjectCard from "./ProjectCard"
-
-// export default function Projects() {
-//   const [repos, setRepos] = useState([])
-
-//   useEffect(() => {
-//     fetch("https://api.github.com/users/ankitjha412/repos?sort=updated&per_page=6")
-//       .then(res => res.json())
-//       .then(data => setRepos(data))
-//       .catch(err => console.error("Error fetching repos:", err))
-//   }, [])
-
-//   return (
-//     <section id="projects" className="section max-w-6xl mx-auto px-4">
-//       <h2 className="text-3xl md:text-4xl font-bold">Projects</h2>
-//       <p className="mt-3 text-neutral-300">Highlighted work I’ve built and shipped.</p>
-
-//       {repos.length === 0 ? (
-//         <p className="mt-6 text-neutral-500">Loading projects...</p>
-//       ) : (
-//         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-//           {repos.map((repo, idx) => (
-//             <ProjectCard
-//               key={repo.id}
-//               idx={idx}
-//               project={{
-//                 title: repo.name,
-//                 description: repo.description || "No description available",
-//                 tech: [repo.language || "Other"],
-//                 live: repo.homepage || repo.html_url,
-//                 code: repo.html_url,
-//               }}
-//             />
-//           ))}
-//         </div>
-//       )}
-//     </section>
-//   )
-// }
-
-
-
 import React, { useEffect, useState } from "react"
+import { motion } from "framer-motion"
 import ProjectCard from "./ProjectCard"
 
 export default function Projects() {
@@ -79,28 +17,50 @@ export default function Projects() {
   }, [])
 
   return (
-    <section id="projects" className="section max-w-6xl mx-auto px-4">
-      <h2 className="text-3xl md:text-4xl font-bold">Projects</h2>
-      <p className="mt-3 text-neutral-300">Highlighted work I’ve built and shipped.</p>
-
-      {repos.length === 0 ? (
-        <p className="mt-6 text-neutral-500">Loading projects...</p>
-      ) : (
-        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {repos.map((repo, idx) => (
-            <ProjectCard
-              key={repo.id}
-              idx={idx}
-              project={{
-                title: repo.name,
-                tech: [repo.language || "Other"],
-                live: repo.homepage,  // ✅ only deployed projects here
-                code: repo.html_url,
-              }}
-            />
-          ))}
+    <section id="projects" className="section bg-navy-900/50 relative">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="mb-16 text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold mb-6"
+          >
+            Featured <span className="text-gradient">Projects</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-gray-400 text-lg max-w-2xl mx-auto"
+          >
+            A showcase of my recent work, side projects, and open source contributions.
+          </motion.p>
         </div>
-      )}
+
+        {repos.length === 0 ? (
+          <div className="flex justify-center items-center h-64">
+            <div className="w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        ) : (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {repos.map((repo, idx) => (
+              <ProjectCard
+                key={repo.id}
+                idx={idx}
+                project={{
+                  title: repo.name,
+                  description: repo.description,
+                  tech: [repo.language || "Code"],
+                  live: repo.homepage,
+                  code: repo.html_url,
+                }}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </section>
   )
 }

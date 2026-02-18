@@ -9,13 +9,14 @@ import Footer from './components/Footer.jsx'
 
 export default function App() {
   return (
-    <div className="font-display bg-neutral-950 bg-grid bg-grid">
+    <div className="font-display bg-navy-900 min-h-screen text-white selection:bg-primary-500/30">
       <Navbar />
       <main>
         <Hero />
         <About />
         <Projects />
-        <Experience />
+        <Experience className="mb-5" />
+
         <Contact />
       </main>
       <Footer />
